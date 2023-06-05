@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MongoDB Hands On 1</h1>
+    <p>Q1. Create a database , give it name like ""Human_Resource"". Create a collection inside this named ""employee""</p>
+    <p>Ans:- I used <b>db.employee.insertMany()</b> and the data to insert the given data </p>
+    <p>Q2. Query the collection ""employee"" and list all the documents</p>
+    <p>Ans:- <b>db.employee.find()</b></p>
+    <p>Q3. Query the collection ""employee"" and list the employees who are having salary more than 30000</p>
+    <p>Ans:- <b>db.employee.find({salary:{$gte:"30000"}})</b></p>
+    <p>Q4. Query the collection ""employee"" and list the employees who are having experience more than 2 years.</p>
+    <p>Ans:- <b>db.employee.find({overallExp:{$gte:"2"}})</b></p>
+    <p>Q5. Query the collection ""employee"" and list the employees who are graduated after 2015 and having experience more than 1 year</p> 
+    <p>Ans:- <b>db.employee.find({yearGrad:"2015",overallExp:{$gt:"1"}})</b></p>
+    <p>Q6:- Query the collection ""employee"" and update the salary of the employee whose salary is greater than 70000 to 65000.</p>
+    <p>Ans:- <b>db.employee.updateMany({salary:{$gte:"30000"}},{$set:{salary:"25000"}})</b></p>
+    <p>Q7:- Delete all the documents from ""employee"" where last company is Y"</p>
+    <p>Ans:- <b>db.employee.deleteMany({lastCompany:/Y$/})</b></p>
+</body>
+</html>
