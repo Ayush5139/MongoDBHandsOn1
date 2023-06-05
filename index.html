@@ -21,6 +21,6 @@
     <p>Q6:- Query the collection ""employee"" and update the salary of the employee whose salary is greater than 70000 to 65000.</p>
     <p>Ans:- <b>db.employee.updateMany({salary:{$gte:"30000"}},{$set:{salary:"25000"}})</b></p>
     <p>Q7:- Delete all the documents from ""employee"" where last company is Y"</p>
-    <p>Ans:- <b>db.employee.deleteMany({lastCompany:/Y$/})</b></p>
+    <p>Ans:- <b>db.employee.deleteMany({lastCompany:"Y"})</b></p>
 </body>
 </html>
